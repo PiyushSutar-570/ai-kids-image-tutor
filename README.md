@@ -3,7 +3,6 @@ AI Kids Image Tutor
 An interactive AI-powered learning assistant for kids.
 
 Features:
-
 Image upload from local device
 
 Vision-based AI conversation
