@@ -1,131 +1,85 @@
-🧠🎨 AI Kids Image Tutor
+AI Kids Image Tutor
 
-An interactive AI-powered learning assistant for kids that:
+An interactive AI-powered learning assistant for kids.
 
-📸 Understands uploaded images
-
-💬 Talks like a friendly teacher
-
-🎯 Highlights objects in images
-
-🎉 Gives reward animations
-
-🔊 Generates voice responses
-
-Built using React + Node.js + OpenRouter (GPT-4o Vision) + ElevenLabs TTS
-
-🚀 Features
+Features:
 
 Image upload from local device
 
-Vision-enabled AI conversation
+Vision-based AI conversation
 
-Context-based memory
+Friendly teacher-style responses
 
-Tool calling support:
+Object highlighting tool
 
-highlight_object
-
-add_reward
+Reward animations
 
 Text-to-Speech audio playback
 
-🏗 Project Structure
-ai-kids-image-tutor/
-│
-├── client/          # React frontend (Vite)
-│   ├── src/
-│   │   ├── components/
-│   │   ├── hooks/
-│   │   ├── services/
-│   │   └── App.jsx
-│
-├── server/          # Node + Express backend
-│   ├── routes/
-│   ├── services/
-│   ├── utils/
-│   └── server.js
+Tech Stack
 
-🛠 Tech Stack
-Frontend
+Frontend:
 
 React
 
 Vite
 
-Custom Hooks
-
-Fetch API
-
-Backend
+Backend:
 
 Node.js
 
 Express
 
+OpenRouter (GPT-4o Vision)
+
+ElevenLabs TTS
+
 Multer (file upload)
 
-OpenRouter GPT-4o
+Project Structure
 
-ElevenLabs Text-to-Speech
+ai-kids-image-tutor/
+client/
+server/
 
-⚙️ Setup Instructions
-1️⃣ Clone Repository
-git clone https://github.com/PiyushSutar-570/ai-kids-image-tutor.git
-cd ai-kids-image-tutor
+Backend Setup
 
-🔹 Backend Setup
+Go to server folder:
 cd server
+
+Install dependencies:
 npm install
 
+Create a .env file inside server folder and add:
 
-Create a .env file inside server/:
-
-OPENROUTER_API_KEY=your_openrouter_key
-ELEVENLABS_API_KEY=your_elevenlabs_key
+OPENROUTER_API_KEY=your_key
+ELEVENLABS_API_KEY=your_key
 PORT=5000
 
-
 Run backend:
-
-npm run dev
-
-
-or
-
 node server.js
 
-🔹 Frontend Setup
+Frontend Setup
+
+Go to client folder:
 cd client
+
+Install dependencies:
 npm install
+
+Run frontend:
 npm run dev
 
-🧪 API Testing (Postman)
+API Testing (Postman)
 
-Method: POST
+POST http://localhost:5000/api/chat
 
-URL: http://localhost:5000/api/chat
+Body → form-data:
 
-Body → form-data
+image (file upload)
 
-image → Upload image file
+userMessage (text)
 
-userMessage → Text message
-
-🎯 Future Improvements
-
-Better UI animations
-
-Child progress tracking
-
-Multiple reward styles
-
-Deployment support
-
-Authentication
-
-👨‍💻 Author
-
+Author:
 Piyush Sutar
 CSE (AI & ML)
-Building real-world AI applications 🚀
