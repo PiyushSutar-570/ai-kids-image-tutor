@@ -1,106 +1,231 @@
-🧠 AI Kids Image Tutor
+# AI Kids Image Tutor
 
-An interactive real-time AI learning assistant that engages children in a 1-minute voice conversation based on an uploaded image.
+An AI-powered interactive learning assistant for children that analyzes uploaded images and conducts a voice-based conversation using Vision AI and Text-to-Speech.
 
-The system uses Vision AI to understand images and generates child-friendly responses with voice output and UI interactions.
+---
 
-🚀 Live Demo
+## 🚀 Overview
 
-Frontend: https://your-frontend-url.vercel.app
+AI Kids Image Tutor enables children to:
 
-Backend: https://your-backend-url.onrender.com
+- Upload an image
+- Speak to the AI teacher
+- Receive child-friendly responses
+- Listen to AI voice replies
+- See interactive UI effects (highlight & rewards)
 
-(Replace with your deployed links)
+The system uses GPT-4o Vision for image understanding and ElevenLabs for natural speech output.
 
-✨ Features
+---
 
-📸 Image upload from local device
+## 🛠 Tech Stack
 
-🧠 Vision-based image understanding (GPT-4o Vision)
+### Frontend
+- React (Vite)
+- Tailwind CSS
+- Web Speech API
 
-🎤 Voice input using Speech Recognition API
+### Backend
+- Node.js
+- Express
+- Multer (image upload)
+- OpenRouter (GPT-4o Vision)
+- ElevenLabs (Text-to-Speech)
 
-🔊 Text-to-Speech audio responses
+---
 
-💬 Multi-turn child-friendly conversation
-
-🎯 Tool calls for:
-
-Object highlighting
-
-Reward animation (confetti)
-
-🎨 Modern Tailwind CSS UI
-
-🏗 Tech Stack
-Frontend
-
-React (Vite)
-
-Tailwind CSS
-
-Web Speech API
-
-Backend
-
-Node.js
-
-Express
-
-Multer (image upload)
-
-OpenRouter (GPT-4o Vision)
-
-ElevenLabs (Text-to-Speech)
-
-📁 Project Structure
 ai-kids-image-tutor/
 │
-├── client/      # React Frontend
-├── server/      # Node.js Backend
+├── client/ # React Frontend
+├── server/ # Express Backend
+└── README.md
 
-⚙️ Backend Setup (Local Development)
 
-1.Navigate to server directory:
+---
 
+## ⚙️ Prerequisites
+
+- Node.js (v18+ recommended)
+- npm
+- OpenRouter API Key
+- ElevenLabs API Key
+
+---
+
+## 📦 Clone Repository
+git clone https://github.com/PiyushSutar-570/ai-kids-image-tutor.git
+
+
+---
+
+# 🔧 Backend Setup
+
+1️⃣ Navigate to backend folder:
 cd server
 
-2.Install dependencies:
-npm install 
 
-3.Create .env file in server part:
-
-OPENROUTER_API_KEY=your_key_here
-
-ELEVENLABS_API_KEY=your_key_here
-
-PORT=5000
-
-4.start the server
-
-nodemon server.js
-
-⚙️ Frontend Setup (Local Development)
-1.Navigate to client directory:
-
-cd client
-
-2.Install dependencies:
-
+2️⃣ Install dependencies:
 npm install
 
-3.start frontend 
 
+3️⃣ Create a `.env` file inside `server` folder:
+PORT=5000
+OPENROUTER_API_KEY=your_openrouter_api_key(openai-4o)
+ELEVENLABS_API_KEY=your_elevenlabs_api_key
+
+
+⚠ Do NOT commit `.env` to GitHub.
+
+4️⃣ Start backend:
+node server.js
+
+
+Backend runs at:
+http://localhost:5000/
+
+
+---
+
+# 🎨 Frontend Setup
+
+1️⃣ Navigate to frontend folder:
+cd client
+
+
+2️⃣ Install dependencies:
+npm install
+
+
+3️⃣ Create a `.env` file inside `client` folder:
+VITE_API_URL=http://localhost:5000
+
+
+4️⃣ Start frontend:
 npm run dev
 
-👨‍💻 Author
-Piyush Sutar
+
+Frontend runs at:
+http://localhost:5173
+
+
+---
+
+## 📡 API Endpoint
+
+### POST `/api/chat`
+
+**Form Data:**
+- `image` → image file
+- `userMessage` → text message
+
+**Response:**
+
+{
+"reply": "AI response text",
+"audio": "base64_audio_string",
+"toolAction": {
+"action": "highlight | reward",
+"target": "object_name"
+}
+}
+
+
+---
+
+## ✨ Features
+
+- Image upload from local device
+- GPT-4o Vision-based image analysis
+- Multi-turn child-friendly conversation (~1 minute)
+- Voice input using browser speech recognition
+- AI voice output using ElevenLabs
+- Tool calling system:
+  - Object highlighting
+  - Reward animation
+- Modern Tailwind CSS UI
+- Full-stack deployment ready
+
+---
+
+## 🔐 Environment Variables
+
+Environment variables must be configured:
+
+### Backend (.env)
+
+OPENROUTER_API_KEY(openai-4o)
+ELEVENLABS_API_KEY
+PORT
+
+
+### Frontend (.env)
+VITE_API_URL
+
+
+Never expose API keys publicly.
+
+---
+
+## 🌍 Deployment
+
+### Backend
+Deploy to:
+- Render
+- Railway
+
+Set environment variables in hosting dashboard.
+
+### Frontend
+Deploy to:
+- Vercel
+
+Set:
+VITE_API_URL=https://your-backend-url
+
+
+
+---
+
+## 🧠 Application Flow
+
+1. User uploads image
+2. AI analyzes image using Vision model
+3. AI generates child-friendly response
+4. AI may trigger:
+   - Object highlight
+   - Reward animation
+5. ElevenLabs generates speech
+6. Frontend plays audio
+7. Conversation continues interactively
+
+---
+
+## 🎯 Assignment Fulfillment
+
+- Displays uploaded image
+- Conducts 1-minute interactive conversation
+- Uses LLM with vision capability
+- Includes tool-calling functionality
+- Uses React frontend
+- Secure environment variable handling
+- Deployment-ready architecture
+
+---
+
+## 👨‍💻 Author
+
+Piyush Sutar  
 CSE (AI & ML)
 
-📌 Notes
-->This project demonstrates integration of:
-->Multimodal AI (Image + Text)
-->Tool calling
-->Real-time voice interaction
-->Full-stack deployment
-->Production-ready environment variable handling
+---
+
+## 📌 Notes
+
+This project demonstrates:
+
+- Multimodal AI integration (Image + Text + Voice)
+- Tool calling implementation
+- Real-time user interaction
+- Full-stack deployment
+- Secure API management
+
