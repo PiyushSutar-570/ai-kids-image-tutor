@@ -60,7 +60,9 @@ ai-kids-image-tutor/
 ├── server/      # Node.js Backend
 
 ⚙️ Backend Setup (Local Development)
+
 1.Navigate to server directory:
+
 cd server
 
 2.Install dependencies:
@@ -69,20 +71,26 @@ npm install
 3.Create .env file in server part:
 
 OPENROUTER_API_KEY=your_key_here
+
 ELEVENLABS_API_KEY=your_key_here
+
 PORT=5000
 
 4.start the server
+
 nodemon server.js
 
 ⚙️ Frontend Setup (Local Development)
 1.Navigate to client directory:
+
 cd client
 
 2.Install dependencies:
+
 npm install
 
 3.start frontend 
+
 npm run dev
 
 👨‍💻 Author
