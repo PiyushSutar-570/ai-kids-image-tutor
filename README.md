@@ -67,6 +67,7 @@ cd server
 npm install 
 
 3.Create .env file in server part:
+
 OPENROUTER_API_KEY=your_key_here
 ELEVENLABS_API_KEY=your_key_here
 PORT=5000
