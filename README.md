@@ -76,7 +76,9 @@ npm install
 3️⃣ Create a `.env` file inside `server` folder:
 
 PORT=5000
+
 OPENROUTER_API_KEY=your_openrouter_api_key(openai-4o)
+
 ELEVENLABS_API_KEY=your_elevenlabs_api_key
 
 
