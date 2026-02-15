@@ -36,8 +36,11 @@ The system uses GPT-4o Vision for image understanding and ElevenLabs for natural
 
 ai-kids-image-tutor/
 │
+
 ├── client/ # React Frontend
+
 ├── server/ # Express Backend
+
 └── README.md
 
 
@@ -61,14 +64,17 @@ git clone https://github.com/PiyushSutar-570/ai-kids-image-tutor.git
 # 🔧 Backend Setup
 
 1️⃣ Navigate to backend folder:
+
 cd server
 
 
 2️⃣ Install dependencies:
+
 npm install
 
 
 3️⃣ Create a `.env` file inside `server` folder:
+
 PORT=5000
 OPENROUTER_API_KEY=your_openrouter_api_key(openai-4o)
 ELEVENLABS_API_KEY=your_elevenlabs_api_key
@@ -77,10 +83,12 @@ ELEVENLABS_API_KEY=your_elevenlabs_api_key
 ⚠ Do NOT commit `.env` to GitHub.
 
 4️⃣ Start backend:
+
 node server.js
 
 
 Backend runs at:
+
 http://localhost:5000/
 
 
@@ -89,22 +97,27 @@ http://localhost:5000/
 # 🎨 Frontend Setup
 
 1️⃣ Navigate to frontend folder:
+
 cd client
 
 
 2️⃣ Install dependencies:
+
 npm install
 
 
 3️⃣ Create a `.env` file inside `client` folder:
+
 VITE_API_URL=http://localhost:5000
 
 
 4️⃣ Start frontend:
+
 npm run dev
 
 
 Frontend runs at:
+
 http://localhost:5173
 
 
@@ -119,6 +132,7 @@ http://localhost:5173
 - `userMessage` → text message
 
 **Response:**
+
 
 {
 "reply": "AI response text",
@@ -153,12 +167,14 @@ Environment variables must be configured:
 
 ### Backend (.env)
 
+
 OPENROUTER_API_KEY(openai-4o)
 ELEVENLABS_API_KEY
 PORT
 
 
 ### Frontend (.env)
+
 VITE_API_URL
 
 
