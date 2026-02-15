@@ -1,84 +1,97 @@
-AI Kids Image Tutor
+🧠 AI Kids Image Tutor
 
-An interactive AI-powered learning assistant for kids.
+An interactive real-time AI learning assistant that engages children in a 1-minute voice conversation based on an uploaded image.
 
-Features:
-Image upload from local device
+The system uses Vision AI to understand images and generates child-friendly responses with voice output and UI interactions.
 
-Vision-based AI conversation
+🚀 Live Demo
 
-Friendly teacher-style responses
+Frontend: https://your-frontend-url.vercel.app
 
-Object highlighting tool
+Backend: https://your-backend-url.onrender.com
 
-Reward animations
+(Replace with your deployed links)
 
-Text-to-Speech audio playback
+✨ Features
 
-Tech Stack
+📸 Image upload from local device
 
-Frontend:
+🧠 Vision-based image understanding (GPT-4o Vision)
 
-React
+🎤 Voice input using Speech Recognition API
 
-Vite
+🔊 Text-to-Speech audio responses
 
-Backend:
+💬 Multi-turn child-friendly conversation
+
+🎯 Tool calls for:
+
+Object highlighting
+
+Reward animation (confetti)
+
+🎨 Modern Tailwind CSS UI
+
+🏗 Tech Stack
+Frontend
+
+React (Vite)
+
+Tailwind CSS
+
+Web Speech API
+
+Backend
 
 Node.js
 
 Express
 
+Multer (image upload)
+
 OpenRouter (GPT-4o Vision)
 
-ElevenLabs TTS
+ElevenLabs (Text-to-Speech)
 
-Multer (file upload)
-
-Project Structure
-
+📁 Project Structure
 ai-kids-image-tutor/
-client/
-server/
+│
+├── client/      # React Frontend
+├── server/      # Node.js Backend
 
-Backend Setup
-
-Go to server folder:
+⚙️ Backend Setup (Local Development)
+1.Navigate to server directory:
 cd server
 
-Install dependencies:
-npm install
+2.Install dependencies:
+npm install 
 
-Create a .env file inside server folder and add:
-
-OPENROUTER_API_KEY=your_key
-ELEVENLABS_API_KEY=your_key
+3.Create .env file in server part:
+OPENROUTER_API_KEY=your_key_here
+ELEVENLABS_API_KEY=your_key_here
 PORT=5000
 
-Run backend:
-node server.js
+4.start the server
+nodemon server.js
 
-Frontend Setup
-
-Go to client folder:
+⚙️ Frontend Setup (Local Development)
+1.Navigate to client directory:
 cd client
 
-Install dependencies:
+2.Install dependencies:
 npm install
 
-Run frontend:
+3.start frontend 
 npm run dev
 
-API Testing (Postman)
-
-POST http://localhost:5000/api/chat
-
-Body → form-data:
-
-image (file upload)
-
-userMessage (text)
-
-Author:
+👨‍💻 Author
 Piyush Sutar
 CSE (AI & ML)
+
+📌 Notes
+->This project demonstrates integration of:
+->Multimodal AI (Image + Text)
+->Tool calling
+->Real-time voice interaction
+->Full-stack deployment
+->Production-ready environment variable handling
