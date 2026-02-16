@@ -1,4 +1,5 @@
-const API_BASE = "http://localhost:5000/api/chat";
+const API_BASE = `${import.meta.env.VITE_API_URL}/api/chat`;
+console.log(API_BASE);
 
 export async function sendMessage(userMessage, imageFile) {
   const formData = new FormData();
