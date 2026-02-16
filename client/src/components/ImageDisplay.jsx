@@ -1,26 +1,21 @@
 export default function ImageDisplay({ imageUrl, toolAction }) {
   return (
-    <div style={{ position: "relative", textAlign: "center" }}>
+    <div className="relative w-full rounded-2xl overflow-hidden shadow-lg border bg-white">
+
       <img
         src={imageUrl}
         alt="AI Scene"
-        style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }}
+        className="w-full h-[400px] object-cover"
       />
 
       {toolAction?.action === "highlight" && (
-        <div
-          style={{
-            position: "absolute",
-            top: "20%",
-            left: "20%",
-            padding: "10px",
-            background: "rgba(255,255,0,0.7)",
-            borderRadius: "10px"
-          }}
-        >
-          {toolAction.target}
+        <div className="absolute top-1/4 left-1/4 animate-pulse">
+          <div className="bg-yellow-400/80 text-gray-900 px-4 py-2 rounded-xl shadow-lg font-semibold text-sm">
+            {toolAction.target}
+          </div>
         </div>
       )}
+
     </div>
   );
 }

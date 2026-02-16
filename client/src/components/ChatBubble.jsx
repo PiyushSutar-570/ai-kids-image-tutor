@@ -1,20 +1,15 @@
 export default function ChatBubble({ role, text }) {
+  const isUser = role === "user";
+
   return (
-    <div
-      style={{
-        textAlign: role === "user" ? "right" : "left",
-        margin: "10px"
-      }}
-    >
+    <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
       <div
-        style={{
-          display: "inline-block",
-          padding: "10px 15px",
-          borderRadius: "20px",
-          background: role === "user" ? "#4CAF50" : "#eee",
-          color: role === "user" ? "white" : "black",
-          maxWidth: "70%"
-        }}
+        className={`
+          px-4 py-2 rounded-2xl text-sm leading-relaxed
+          ${isUser ? "bg-indigo-600 text-white" : "bg-gray-200 text-gray-800"}
+          max-w-[60%]
+          shadow-sm
+        `}
       >
         {text}
       </div>

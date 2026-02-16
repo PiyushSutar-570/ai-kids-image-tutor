@@ -1,18 +1,18 @@
 export default function VoiceButton({ isListening, onClick }) {
   return (
-    <button
-      onClick={onClick}
-      style={{
-        padding: "15px 30px",
-        fontSize: "18px",
-        borderRadius: "50px",
-        margin: "20px",
-        background: isListening ? "red" : "#2196F3",
-        color: "white",
-        border: "none"
-      }}
-    >
-      {isListening ? "Listening..." : "🎤 Speak"}
-    </button>
+    <div className="flex justify-center mt-6">
+      <button
+        onClick={onClick}
+        className={`
+          px-6 py-3 rounded-full text-white text-lg font-medium
+          shadow-lg transition-all duration-300
+          ${isListening
+            ? "bg-red-500 animate-pulse"
+            : "bg-indigo-600 hover:scale-105"}
+        `}
+      >
+        {isListening ? "Listening..." : "🎤 Speak"}
+      </button>
+    </div>
   );
 }
